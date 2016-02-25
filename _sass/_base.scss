@@ -76,3 +76,9 @@ hr {
     display: inline-block;
   }
 }
+
+.post-meta {
+  color: lighten($text-color, 20%);
+  margin-top: -12px;
+  font-size: 13px;
+}

@@ -1,5 +1,7 @@
 # Delite's Codeschnipsel Blog
 
+Ihr könnt den Blog auf [delitecake.github.io](http://delitecake.github.io/) finden.
+
 ## Getting Started - Blog installieren
 
 1. Ruby > 2.0.0 installieren [s. hier](http://railsgirlshh.github.io/install/)

@@ -1,0 +1,31 @@
+#disclaimer {
+  .disclaimer-image {
+    float: left;
+    width: 22%;
+    img {
+      width: 100%;
+      display: block;
+      margin: 0px auto;
+    }
+  }
+  .disclaimer-content {
+    float: left;
+    width: 78%;
+  }
+  .disclaimer-content--container {
+    padding: 10px;
+    font-size: 15px;
+    h1 {
+      margin: 0px;
+      padding: 0px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $color-blue;
+      font-size: 28px;
+    }
+    i {
+      color: $color-green;
+      font-style: normal;
+    }
+  }
+}

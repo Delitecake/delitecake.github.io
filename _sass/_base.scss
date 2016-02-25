@@ -4,6 +4,21 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Open Sans', sans-serif;
+  color: $text-color;
+}
+
+a {
+  color: $color-blue;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+hr {
+  background: none;
+  border: 0px;
+  border-bottom: 1px solid $color-grey;
 }
 
 .clearfix {
@@ -15,5 +30,5 @@ body {
   width: 100%;
   max-width: 900px;
   margin: 0px auto;
-  padding: 0px 10px;
+  padding: 0px;
 }

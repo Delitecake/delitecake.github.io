@@ -11,4 +11,14 @@ Ihr könnt den Blog auf [delitecake.github.io](http://delitecake.github.io/) fin
 
 ## Gastbeitrag schreiben
 
+```md
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+```
+
 TODO

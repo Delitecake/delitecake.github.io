@@ -1,64 +1,64 @@
 ---
-layout: default
+layout: home
 ---
 
-{% if paginator.page == 1 %}
-  <div class="container">
-    <div id="disclaimer">
-      <div class="disclaimer-image">
-        <img src="images/vorwort.jpg" alt="Vorwort" />
-      </div>
-      <div class="disclaimer-content">
-        <div class="disclaimer-content--container">
-          <h1>Vorwort</h1>
-          <p>Schön, dass du auf meine Tutorial-Seite gefunden hast. Ich bin Delite und habe 2007 u.a. das Projekt <i>giatu.de</i> ins Leben gerufen. Ich war außerdem aktiv auf <i>shizoo's tutotonic</i> und habe als Programmiererin an einigen Pokemon und TCGs mitgearbeitet. Da keine Tutorialseite mehr von mir existiert oder betreut wird, soll diese Seite hier als Archiv dienen und euch zugleich neue Tutorials liefern.</p>
-          <p>Hier findest du Step-by-Step Aufbau Tutorials um deine eigene automatische <b>Adopage</b>, <b>Grafikpage</b>, <b>Staffelpage</b> (und was dir sonst noch einfällt). Dafür verwenden wir das Framework <a href="https://de.wikipedia.org/wiki/Ruby_on_Rails" target="_blank">Ruby on Rails</a>.</p>
-          <p>Wir starten ganz von Anfang an. Das einzige was du brauchst ist ein Computer und eine Internetverbindung. Du kannst die Tutorials als Kochanleitung verstehen, die aber natürlich von deiner Kreativität und Variation leben.</p>
-          <p>Und nun ran ans Programmieren. Wenn du Fragen hast, schicke gerne eine mail an <a href="mailto:delitecake+codeschnipsel@gmail.com">delitecake+codeschnipsel@gmail.com</a>. Abonniere doch meinen <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS-Feed</a></p>
-          <p class="goodbye">Mata ne,<br /><em>Eure Delite</em></p>
+<div id="profile">
+  <div class="middle">
+    <div class="inner">
+      <a href="{{ site.baseurl }}/" class="brand">
+        <span class="icon">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-code fa-stack-1x"></i>
+          </span>
+        </span>
+        <span class="title">delitecake</span>
+        <div class="clearfix"></div>
+      </a>
+
+      <div class="content">
+
+        <div class="intro">
+          Schön, dass du hierher gefunden hast &#9825; Hier findest du meine aktuellen Projekte sowie Blog Posts oder Tutorials.
+          <br /><br />Mata ne, eure Delite
         </div>
+
+        <div class="posts">
+          <h2><i class="fa fa-newspaper-o"></i> Blog Posts</h2>
+          {% for post in site.posts %}
+            <div class="post-item">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+              <time class="media-meta post-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d.%m.%Y" }}</time>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="button-bar">
+          <div class="button-bar-button">
+            <a href="http://www.tradyng.de">
+              <span class="title"><i class="fa fa-home"></i> tradyng.de</span>
+              <span class="description">Das vollautomatische TCG mit einem liebevollen Team.</span>
+            </a>
+          </div>
+
+          <div class="button-bar-button">
+            <a href="http://twitter.com/delite_cake">
+              <span class="title"><i class="fa fa-twitter"></i> twitter.com/delite_cake</span>
+              <span class="description">Bleibt auf Twitter mit mir in Kontakt.</span>
+            </a>
+          </div>
+
+          <div class="button-bar-button">
+            <a href="mailto:delitecake@gmail.com">
+              <span class="title"><i class="fa fa-envelope-o"></i> delitecake@gmail.com</span>
+              <span class="description">Schicke mir Feedback oder Anfragen für dein Projekt.</span>
+            </a>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+
       </div>
-      <div class="clearfix"></div>
-      <hr />
     </div>
-  </div>
-{% endif %}
-
-<div id="home">
-  <div class="container">
-    {% for post in paginator.posts %}
-      <div class="post-list-item">
-        <div>
-          <time class="media-meta post-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d.%m.%Y" }}</time>
-          <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <div class="clearfix"></div>
-        </div>
-        <p>{{ post.excerpt }}</p>
-        {% capture content_words %} 
-          {{ post.content | number_of_words }} 
-        {% endcapture %} 
-        {% capture excerpt_words %} 
-          {{ post.excerpt | number_of_words }} 
-        {% endcapture %} 
-        <p class="read-more-section">
-          <a class="btn btn-sm btn-primary" href="{{ post.url }}" role="button">Weiterlesen <i class="fa fa-arrow-circle-right"></i></a>
-          <div class="clearfix"></div>
-        </p>
-      </div>
-    {% endfor %}
-
-    {% if paginator.total_pages > 1 %}
-      <hr />
-      <ul class="pager">
-        {% if paginator.previous_page %}
-        <li class="previous"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Letzte Seite</a>
-        </li>
-        {% endif %} 
-        {% if paginator.next_page %}
-        <li class="next"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Nächste Seite &rarr;</a>
-        </li>
-        {% endif %}
-      </ul>
-    {% endif %}
   </div>
 </div>

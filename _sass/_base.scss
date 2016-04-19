@@ -65,32 +65,16 @@ hr {
   }
 }
 
+code.highlighter-rouge {
+  background: rgba(#fff, 0.4);
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 16px;
+}
+
 .highlight {
-  border: 1px solid lighten($color-grey, 5%);
+  border: 1px solid lighten($color-grey, 15%);
   padding-left: 15px;
   position: relative;
-  margin-left: 30px;
-  &:before {
-    position: absolute;
-    content: "";
-    display: block;
-    background: darken($color-grey, 8%);
-    width: 30px;
-    top: 0px;
-    left: -30px;
-    height: 100%;
-  }
-  &:after {
-    position: absolute;
-    font-family: 'FontAwesome';
-    content: "\f121";
-    font-size: 20px;
-    line-height: 20px;
-    margin-top: -10px;
-    color: #fff;
-    left: -30px;
-    top: 50%;
-    width: 30px;
-    text-align: center;
-  }
+  margin-left: 0px;
 }

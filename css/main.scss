@@ -6,7 +6,7 @@
 $color-green: #52E3A0;
 $color-blue: #5752E3;
 $text-color: lighten(#000, 20%);
-$color-grey: lighten($text-color, 60%);
+$color-grey: darken($text-color, 40%);
 
 @import "base";
 @import "profile";
